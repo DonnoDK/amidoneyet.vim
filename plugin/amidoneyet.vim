@@ -8,7 +8,7 @@ let s:minor_version = 0
 let s:keepcpo = &cpo
 set cpo&vim
 
-let g:characters_per_page = 2400
+let g:characters_per_page = 2400.0
 
 function! s:count_pages()
     let filename = expand("%")
