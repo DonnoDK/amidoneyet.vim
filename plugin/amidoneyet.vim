@@ -12,7 +12,7 @@ let g:characters_per_page = 2400.0
 
 function! s:count_pages()
     let filename = expand("%")
-    let cmd = "detex " . filename . " | wc -c | tr -d [:space:]"
+    let cmd = "detex " . filename . " | wc -c | tr -d ' '"
     let result = system(cmd) / g:characters_per_page
     echo printf("%.1f %s", result, "pages")
 endfunction
